@@ -10,6 +10,8 @@ npm install -g
 
 ## Usage
 
+Set the environment variable `PROXIES_FO_API_KEY`
+
 ```sh
 proxies-fo reseller
 proxies-fo create-sub-user --email someemail@gmail.com --username someuser
