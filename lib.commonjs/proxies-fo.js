@@ -6,6 +6,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.ProxiesFoClient = void 0;
 const node_fetch_1 = __importDefault(require("node-fetch"));
 class ProxiesFoClient {
+    static BASE_URL = "https://proxies.fo/api/v1";
+    apiKey;
     constructor({ apiKey }) {
         this.apiKey = apiKey || process.env.PROXIES_FO_API_KEY;
     }
@@ -27,7 +29,7 @@ class ProxiesFoClient {
     async createSubUser({ email, username }) {
         return await this._call("/reseller/sub-users", {
             method: "POST",
-            body: new URLSearchParams({ email, username }).toString(),
+            body: new URLSearchParams({ email, username }),
         });
     }
     async getAllSubUsers() {
@@ -51,6 +53,5 @@ class ProxiesFoClient {
         });
     }
 }
-ProxiesFoClient.BASE_URL = "https://proxies.fo/api/v1";
 exports.ProxiesFoClient = ProxiesFoClient;
 //# sourceMappingURL=proxies-fo.js.map

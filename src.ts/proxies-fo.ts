@@ -25,7 +25,7 @@ export class ProxiesFoClient {
   async createSubUser({ email, username }) {
     return await this._call("/reseller/sub-users", {
       method: "POST",
-      body: new URLSearchParams({ email, username }).toString(),
+      body: new URLSearchParams({ email, username }),
     });
   }
   async getAllSubUsers() {

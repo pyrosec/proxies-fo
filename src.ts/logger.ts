@@ -60,6 +60,6 @@ const createLogger = (proc?: string) => {
   return logger;
 };
 
-const logger = createLogger(require('../package').name);
+const logger = createLogger("proxies-fo");
 
 export function getLogger() { return logger; }

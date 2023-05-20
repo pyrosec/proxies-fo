@@ -21,3 +21,4 @@ export declare class ProxiesFoClient {
         planId: any;
     }): Promise<any>;
 }
+//# sourceMappingURL=proxies-fo.d.ts.map
